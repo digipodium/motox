@@ -1,0 +1,70 @@
+{% extends '../layout/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<!-- body -->
+
+<body class="main-layout inner_page">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   {% include 'include/navigation.html' %}
+   <!-- end header inner -->
+   <!-- services -->
+   <div class="services">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage text_align_left">
+                  <h2>Our Services</h2>
+                  <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <!--  Demos -->
+               <div class="owl-carousel owl-theme">
+                  <div class="item">
+                     <div class="services_box text_align_center">
+                        <figure><img src="{% static 'images/seavice1.png' %}" alt="#" /></figure>
+                        <h3>Industrials</h3>
+                        <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                           exercitation ullamco laboris nisi ut aliquip ex ea </p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="services_box text_align_center">
+                        <figure><img src="{% static 'images/seavice2.png' %}" alt="#" /></figure>
+                        <h3>Technology</h3>
+                        <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                           exercitation ullamco laboris nisi ut aliquip ex ea </p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="services_box text_align_center">
+                        <figure><img src="{% static 'images/seavice3.png' %}" alt="#" /></figure>
+                        <h3>Health Care</h3>
+                        <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                           exercitation ullamco laboris nisi ut aliquip ex ea </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end services -->
+   <!-- footer -->
+
+   {% include 'include/footer.html' %}
+   <!-- end footer -->
+   <!-- Javascript files-->
+   {% include 'include/scripts.html' %}
+
+</body>
+{% endblock body %}

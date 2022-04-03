@@ -1,0 +1,430 @@
+{% extends '../layout/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<!-- body -->
+
+<body class="main-layout">
+  <!-- loader  -->
+  <div class="loader_bg">
+    <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
+  </div>
+  <!-- end loader -->
+  <!-- header -->
+  {% include 'include/navigation.html' %}
+  <!-- end header inner -->
+  <!-- banner -->
+  <div class="section">src
+    <div class="full_bg">
+      <!-- carousel code -->
+      <div id="banner1" class="carousel slide slider_main">
+        <ol class="carousel-indicators">
+          <li data-target="#banner1" data-slide-to="0" class="active"></li>
+          <li data-target="#banner1" data-slide-to="1"></li>
+          <li data-target="#banner1" data-slide-to="2"></li>
+          <li data-target="#banner1" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- first slide -->
+          <div class="carousel-item active">
+            <div class="container-wifgr">
+              <div class="carousel-caption relative">
+                <div class="row d_flex">
+                  <div class="col-md-5">
+                    <div class="futu_img">
+                      <figure><img src="{% static 'images/top_img.png' %}" alt="#" /></figure>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="creative">
+                      <h1>Become the Architect of Your future Business </h1>
+                      <form class="serch_form">
+                        <input class="serc" placeholder="Search text here..." type="text" name="Search">
+                        <button class="sear_btn">Search Now</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- second slide -->
+          <div class="carousel-item">
+            <div class="container-wifgr">
+              <div class="carousel-caption relative">
+                <div class="row d_flex">
+                  <div class="col-md-5">
+                    <div class="futu_img">
+                      <figure><img src="{% static 'images/top_img.png' %}" alt="#" /></figure>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="creative">
+                      <h1>Become the Architect of Your future Business </h1>
+                      <form class="serch_form">
+                        <input class="serc" placeholder="Search text here..." type="text" name="Search">
+                        <button class="sear_btn">Search Now</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- third slide-->
+          <div class="carousel-item">
+            <div class="container-wifgr">
+              <div class="carousel-caption relative">
+                <div class="row d_flex">
+                  <div class="col-md-5">
+                    <div class="futu_img">
+                      <figure><img src="{% static 'images/top_img.png' %}" alt="#" /></figure>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="creative">
+                      <h1>Become the Architect of Your future Business </h1>
+                      <form class="serch_form">
+                        <input class="serc" placeholder="Search text here..." type="text" name="Search">
+                        <button class="sear_btn">Search Now</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- for slide-->
+          <div class="carousel-item">
+            <div class="container-wifgr">
+              <div class="carousel-caption relative">
+                <div class="row d_flex">
+                  <div class="col-md-5">
+                    <div class="futu_img">
+                      <figure><img src="{% static 'images/top_img.png' %}" alt="#" /></figure>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="creative">
+                      <h1>Become the Architect of Your future Business </h1>
+                      <form class="serch_form">
+                        <input class="serc" placeholder="Search text here..." type="text" name="Search">
+                        <button class="sear_btn">Search Now</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- controls -->
+        <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end banner -->
+  <!-- innva -->
+  <div class="innva">
+    <div class="container">
+      <div class="row d_flex">
+        <div class="col-md-6">
+          <div class="titlepage text_align_left">
+            <h2>More than 50% of innvation comes from voice Of customers </h2>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo</p>
+            <a class="read_more" href="javascript:void(0)">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="innva_img">
+            <figure><img src="images/innva.png" alt="#" /></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end innva -->
+  <!-- services -->
+  <div class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="titlepage text_align_left">
+            <h2>Our Services</h2>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!--  Demos -->
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="services_box text_align_center">
+                <figure><img src="images/seavice1.png" alt="#" /></figure>
+                <h3>Industrials</h3>
+                <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="services_box text_align_center">
+                <figure><img src="images/seavice2.png" alt="#" /></figure>
+                <h3>Technology</h3>
+                <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="services_box text_align_center">
+                <figure><img src="images/seavice3.png" alt="#" /></figure>
+                <h3>Health Care</h3>
+                <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end services -->
+  <!-- secret -->
+  <div class="secret">
+    <div class="container">
+      <div class="row d_flex grid">
+        <div class="col-md-6">
+          <div class="secret_img">
+            <figure><img src="images/secret_img.png" alt="#" /></figure>
+          </div>
+        </div>
+        <div class="col-md-6 older">
+          <div class="titlepage text_align_left">
+            <h2>The Secret Of Business</h2>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo</p>
+            <a class="read_more" href="javascript:void(0)">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end secret -->
+
+  <!-- testimonial -->
+  <div class="testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="titlepage text_align_center">
+            <h2>Clients Testimonial</h2>
+            <p>use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
+              of text. All the Lorem Ipsum generators on th</p>
+          </div>
+        </div>
+      </div>
+      <!-- start slider section -->
+      <div class="row">
+        <div class="col-md-12">
+          <div id="myCarousel" class="carousel slide clients_banner" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container-wid">
+                  <div class="carousel-caption tetxs">
+                    <div class="row d_flex">
+                      <div class="col-md-3 padd0">
+                        <div class="custom">
+                          <span>01</span>
+                          <h3>aderu</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content
+                            using Lorem Ipsum is that it has a </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 padd0">
+                        <div class="custom top_middile">
+                          <span>02</span>
+                          <h3>joymini</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters,</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3 padd0">
+                        <div class="custom">
+                          <span>03</span>
+                          <h3>jonson</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content
+                            using Lorem Ipsum is that it has a </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-wid">
+                  <div class="carousel-caption tetxs">
+                    <div class="row d_flex">
+                      <div class="col-md-3 padd0">
+                        <div class="custom">
+                          <span>01</span>
+                          <h3>aderu</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content
+                            using Lorem Ipsum is that it has a </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 padd0">
+                        <div class="custom top_middile">
+                          <span>02</span>
+                          <h3>joymini</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters,</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3 padd0">
+                        <div class="custom">
+                          <span>03</span>
+                          <h3>jonson</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content
+                            using Lorem Ipsum is that it has a </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-wid">
+                  <div class="carousel-caption tetxs">
+                    <div class="row d_flex">
+                      <div class="col-md-3 padd0">
+                        <div class="custom">
+                          <span>01</span>
+                          <h3>aderu</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content
+                            using Lorem Ipsum is that it has a </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 padd0">
+                        <div class="custom top_middile">
+                          <span>02</span>
+                          <h3>joymini</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters,</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3 padd0">
+                        <div class="custom">
+                          <span>03</span>
+                          <h3>jonson</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content
+                            using Lorem Ipsum is that it has a </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end testimonial -->
+  <!-- market -->
+  <div class="market">
+    <div class="container">
+      <div class="row d_flex">
+        <div class="col-md-6">
+          <div class="titlepage text_align_left">
+            <h2>Let's talk about improving your business marketing...</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters,</p>
+            <a class="read_more" href="javascript:void(0)">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="market_img">
+            <figure><img src="images/market.png" alt="#" /></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end market -->
+  <!-- contact -->
+  <div class="contact">
+    <div class="container-fluid">
+      <div class="row d_flex">
+        <div class="col-md-5">
+          <form id="request" class="main_form">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="titlepage text_align_left">
+                  <h2>Get In Touch</h2>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <input class="form_control" placeholder="Name " type="type" name=" Name">
+              </div>
+              <div class="col-md-12">
+                <input class="form_control" placeholder="Email" type="type" name="Email">
+              </div>
+              <div class="col-md-12">
+                <textarea class="form_cont" placeholder="Message" type="type" name="message"></textarea>
+              </div>
+              <div class="col-md-12">
+                <div class="group_form">
+                  <button class="send_btn">Send</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-7">
+          <div class="map_main">
+            <div class="map-responsive">
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
+                width="600" height="490" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end contact -->
+  <!-- footer -->
+  {% include 'include/footer.html' %}
+  <!-- end footer -->
+  <!-- Javascript files-->
+  {% include 'include/scripts.html' %}
+
+</body>
+{% endblock body %}

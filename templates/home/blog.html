@@ -1,0 +1,84 @@
+{% extends '../layout/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<body class="main-layout inner_page">
+  <!-- loader  -->
+  <div class="loader_bg">
+    <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
+  </div>
+  <!-- end loader -->
+  <!-- header -->
+  {% include 'include/navigation.html' %}
+  <!-- end header inner -->
+  <!-- blog -->
+  <div class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="titlepage text_align_left">
+            <h2>Our blog</h2>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="blog_box text_align_center">
+            <figure><img src="{% static 'images/seavice1.png' %}" alt="#" /></figure>
+            <h3>Industrials</h3>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog_box text_align_center">
+            <figure><img src="{% static 'images/seavice2.png' %}" alt="#" /></figure>
+            <h3>Technology</h3>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog_box text_align_center">
+            <figure><img src="{% static 'images/seavice3.png' %}" alt="#" /></figure>
+            <h3>Health Care</h3>
+            <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end blog -->
+  <!-- market -->
+  <div class="market">
+    <div class="container">
+      <div class="row d_flex">
+        <div class="col-md-6">
+          <div class="titlepage text_align_left">
+            <h2>Let's talk about improving your business marketing...</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+              letters,</p>
+            <a class="read_more" href="javascript:void(0)">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="market_img">
+            <figure><img src="{% static 'images/market.png' %}" alt="#" /></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end market -->
+  <!-- footer -->
+  {% include 'include/footer.html' %}
+  <!-- end footer -->
+  <!-- Javascript files-->
+  {% include 'include/scripts.html' %}
+
+</body>
+{% endblock body %}

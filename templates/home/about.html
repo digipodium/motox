@@ -1,0 +1,42 @@
+{% extends '../layout/base.html' %}
+{% load static %}
+{% block body %}
+
+<body class="main-layout inner_page">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   {% include 'include/navigation.html' %}
+   <!-- end header inner -->
+   <!-- innva -->
+   <div class="innva">
+      <div class="container">
+         <div class="row d_flex">
+            <div class="col-md-6">
+               <div class="titlepage text_align_left">
+                  <h2>About Us</h2>
+                  <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                     exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                  <a class="read_more" href="javascript:void(0)">Read More</a>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="innva_img">
+                  <figure><img src="{% static 'images/innva.png' %}" alt="#" /></figure>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end innva -->
+   <!-- footer -->
+   {% include 'include/footer.html' %}
+   <!-- end footer -->
+   <!-- Javascript files-->
+   {% include 'include/scripts.html' %}
+
+</body>
+{% endblock body %}
