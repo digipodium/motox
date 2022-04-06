@@ -1,0 +1,71 @@
+{% extends '../layout/base.html' %}
+{% load static %}
+
+
+{% block css %}
+
+{% endblock css %}
+
+
+{% block body %}
+
+<body class="main-layout inner_page">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="{% static 'images/loading_2.gif' %}" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    {% include 'include/navigation.html' %}
+    <!-- end header inner -->
+    <!-- blog -->
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog_box text_align_center">
+                        <figure><img src="{% static 'images/seavice1.png' %}" alt="#" /></figure>
+                        <h3>Industrials</h3>
+                        <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation
+                            ullamco laboris nisi ut aliquip ex ea </p>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-top: 3rem;">
+                    <form method="POST" class="shadow-lg p-3">
+                        <h1>Login</h1>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <p class="text-sm mt-3">
+                           Create acccount, <a href="/register" class="card-link">Register</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end blog -->
+
+    <!-- footer -->
+    {% include 'include/footer.html' %}
+    <!-- end footer -->
+    <!-- Javascript files-->
+    {% include 'include/scripts.html' %}
+
+</body>
+{% endblock body %}

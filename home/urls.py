@@ -8,4 +8,7 @@ urlpatterns = [
     path('contact/',TemplateView.as_view(template_name='home/contact.html')),
     path('services/',TemplateView.as_view(template_name='home/services.html')),
     path('testimonial/',TemplateView.as_view(template_name='home/testimonial.html')),
+    path('login/',TemplateView.as_view(template_name='accounts/login.html')),
+    path('register/',TemplateView.as_view(template_name='accounts/register.html')),
+
 ]
