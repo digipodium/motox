@@ -383,7 +383,8 @@
     <div class="container-fluid">
       <div class="row d_flex">
         <div class="col-md-5">
-          <form id="request" class="main_form">
+          <form id="request" class="main_form" method="post">
+            {% csrf_token %}
             <div class="row">
               <div class="col-md-12 ">
                 <div class="titlepage text_align_left">
@@ -391,10 +392,10 @@
                 </div>
               </div>
               <div class="col-md-12">
-                <input class="form_control" placeholder="Name " type="type" name=" Name">
+                <input class="form_control" placeholder="Name " type="type" name="name">
               </div>
               <div class="col-md-12">
-                <input class="form_control" placeholder="Email" type="type" name="Email">
+                <input class="form_control" placeholder="Email" type="type" name="email">
               </div>
               <div class="col-md-12">
                 <textarea class="form_cont" placeholder="Message" type="type" name="message"></textarea>
