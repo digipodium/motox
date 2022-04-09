@@ -13,28 +13,34 @@
   <!-- end header inner -->
   <!-- contact -->
   <div class="contact">
+
     <div class="container-fluid">
       <div class="row d_flex">
         <div class="col-md-5">
-          <form id="request" class="main_form">
+          <form id="request" class="main_form" method="post">
+            {% csrf_token %}
             <div class="row">
               <div class="col-md-12 ">
                 <div class="titlepage text_align_left">
                   <h2>Get In Touch</h2>
+                  {% include 'include/message.html' %}
                 </div>
               </div>
               <div class="col-md-12">
-                <input class="form_control" placeholder="Name " type="type" name=" Name">
+                <input class="form_control" placeholder="Name " type="text" name="name">
               </div>
               <div class="col-md-12">
-                <input class="form_control" placeholder="Email" type="type" name="Email">
+                <input class="form_control" placeholder="Email" type="email" name="email">
               </div>
               <div class="col-md-12">
-                <textarea class="form_cont" placeholder="Message" type="type" name="message"></textarea>
+                <input class="form_control" placeholder="Subject" type="text" name="subject">
+              </div>
+              <div class="col-md-12">
+                <textarea class="form_cont" placeholder="Message" name="message"></textarea>
               </div>
               <div class="col-md-12">
                 <div class="group_form">
-                  <button class="send_btn">Send</button>
+                  <button type="submit" class="send_btn">Send</button>
                 </div>
               </div>
             </div>
