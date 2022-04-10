@@ -1,12 +1,19 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from .models import Subscriber
 
 # Create your views here.
 def index_view(request):
     if request.method == 'POST':
-        print("form submitted")
-        form = request.POST
-        print(form)
+        email = request.POST.get('subscriber')
+        if email and len(email)>10 and email.find('@')>0:
+            sub = Subscriber(email=email)
+            sub.save()
+            messages.success(request, 'You have been successfully subscribed.')
+        else:
+            messages.error(request, 'Please enter a valid email address.')
+        return redirect('index')
+
     return render(request, 'home/index.html',)
 
 def contact_view(request):
