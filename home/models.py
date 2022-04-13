@@ -8,3 +8,18 @@ class Subscriber(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Project(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    team = models.CharField(max_length=100)
+    description = models.TextField()
+    rating = models.IntegerField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Project'
+        verbose_name_plural = 'Projects'
+
+    def __str__(self):
+        return self.title

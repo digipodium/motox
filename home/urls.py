@@ -10,5 +10,6 @@ urlpatterns = [
     path('testimonial/',TemplateView.as_view(template_name='home/testimonial.html')),
     path('login/',TemplateView.as_view(template_name='accounts/login.html')),
     path('register/',TemplateView.as_view(template_name='accounts/register.html')),
+    path('dashboard/',dashboard_view, name='dashboard'),
 
 ]

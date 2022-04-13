@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Subscriber
+from .forms import ProjectForm
 
 # Create your views here.
 def index_view(request):
@@ -34,3 +35,15 @@ def contact_view(request):
             messages.error(request, 'Please enter your message.')
         return redirect('contact')
     return render(request, 'home/contact.html')
+
+def dashboard_view(request):
+    form = ProjectForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your project has been successfully added.')
+            return redirect('dashboard')
+    ctx = {
+        'form': form,
+    }
+    return render(request, 'home/dashboard.html', ctx)
