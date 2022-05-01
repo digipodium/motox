@@ -39,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'crispy_forms',
+    'social_django',    
+    "payments",
+]
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -66,6 +73,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -132,3 +141,14 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SOCIAL_AUTH_GITHUB_KEY = '02d4d718e9a48efa844c'
+SOCIAL_AUTH_GITHUB_SECRET = 'e2cd6da7008f3559b5c31cf9c9eb5a709fedad8b'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+PAYMENT_HOST = '127.0.0.1:8000'
+# PAYMENT_MODEL = 'home.Payment'
+PAYMENT_VARIANTS = {
+    'dummy': ('payments.dummy.DummyProvider', {})
+}

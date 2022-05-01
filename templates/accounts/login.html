@@ -51,10 +51,14 @@
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
+                       
+                        
                         <p class="text-sm mt-3">
                            Create acccount, <a href="/register" class="card-link">Register</a>
                         </p>
                     </form>
+                    <hr>
+                    <a class="btn btn-dark" href="{% url "social:begin" "github" %}">Login with Github</a>
                 </div>
             </div>
         </div>

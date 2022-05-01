@@ -18,7 +18,13 @@
                             <li><a href="/blog">Blog </a></li>
                             <li><a href="/contact">Contact</a></li>
                             <li><a href="/dashboard">dashboard</a></li>
+
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'admin:logout' %}">Logout</a></li>
+                            {% else %}
                             <li><a href="/login">Login</a></li>
+                            {% endif %}
+
                         </ul>
                         <button class="nav-toggler">
                             <span></span>
