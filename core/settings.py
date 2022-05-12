@@ -152,3 +152,6 @@ PAYMENT_HOST = '127.0.0.1:8000'
 PAYMENT_VARIANTS = {
     'dummy': ('payments.dummy.DummyProvider', {})
 }
+
+LOGIN_REDIRECT_URL = "/"  # Route defined in home/urls.py
+LOGOUT_REDIRECT_URL = "/"  # Route defined in home/urls.py

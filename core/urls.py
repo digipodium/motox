@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', include('social_django.urls', namespace='social')),
     path('payments/', include('payments.urls')),
+    path('',include('authentication.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

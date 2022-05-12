@@ -19,46 +19,72 @@
     {% include 'include/navigation.html' %}
     <!-- end header inner -->
     <!-- blog -->
-    <div class="login">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="blog_box text_align_center">
-                        <figure><img src="{% static 'images/seavice1.png' %}" alt="#" /></figure>
-                        <h3>Industrials</h3>
-                        <p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation
-                            ullamco laboris nisi ut aliquip ex ea </p>
-                    </div>
+    <div class="row justify-content-center form-bg-image"
+        data-background-lg="/static/assets/img/illustrations/signin.svg">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
+                <div class="text-center text-md-center mb-4 mt-md-0">
+                    <h1 class="mb-0 h3">
+                        Student Management
+                    </h1>
+                    <br />
+                    <p>
+                        {% if msg %}
+                        {{ msg | safe }}
+                        {% else %}
+                        Add your credentials
+                        {% endif %}
+                    </p>
                 </div>
-                <div class="col-md-4" style="margin-top: 3rem;">
-                    <form method="POST" class="shadow-lg p-3">
-                        <h1>Login</h1>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
+                <form method="post" action="" class="mt-4">
+
+                    {% csrf_token %}
+
+                    <!-- Form -->
+                    <div class="form-group mb-4">
+                        <label for="email">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                                <span class="fas fa-user-circle"></span>
+                            </span>
+                            {{ form.username }}
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Password">
+                    </div>
+                    <!-- End of Form -->
+                    <div class="form-group">
+                        <!-- Form -->
+                        <div class="form-group mb-4">
+                            <label for="password">Your Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <span class="fas fa-unlock-alt"></span>
+                                </span>
+                                {{ form.password }}
+                            </div>
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <!-- End of Form -->
+                        <div class="d-flex justify-content-between align-items-top mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="remember">
+                                <label class="form-check-label mb-0" for="remember">
+                                    Remember me
+                                </label>
+                            </div>
+                            <div><a href="/page-forgot-password.html" class="small text-right">Lost password?</a></div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                       
-                        
-                        <p class="text-sm mt-3">
-                           Create acccount, <a href="/register" class="card-link">Register</a>
-                        </p>
-                    </form>
-                    <hr>
-                    <a class="btn btn-dark" href="{% url "social:begin" "github" %}">Login with Github</a>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" name="login" class="btn btn-gray-800">Sign IN</button>
+                    </div>
+                </form>
+                <br />
+
+
+                <div class="d-flex justify-content-center align-items-center mt-4">
+                    <span class="fw-normal">
+                        Not registered?
+                        <a href="{% url 'register' %}" class="fw-bold">Create account</a>
+                    </span>
                 </div>
             </div>
         </div>
