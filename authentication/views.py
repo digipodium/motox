@@ -7,11 +7,8 @@ from .forms import LoginForm, SignUpForm
 
 def login_view(request):
     form = LoginForm(request.POST or None)
-
     msg = None
-
     if request.method == "POST":
-
         if form.is_valid():
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password")
@@ -26,7 +23,6 @@ def login_view(request):
         else:
             msg = 'Error validating the form'
             messages.error(request, msg)
-
     return render(request, "accounts/login.html", {"form": form, "msg": msg})
 
 
@@ -45,7 +41,7 @@ def register_user(request):
             msg = 'Account created - please <a href="/login">login</a>.'
             success = True
             messages.success(request, msg)
-            return redirect("/login/")
+            return redirect('authem:login')
 
         else:
             msg = 'Forms details are invalid'

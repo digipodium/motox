@@ -153,5 +153,5 @@ PAYMENT_VARIANTS = {
     'dummy': ('payments.dummy.DummyProvider', {})
 }
 
-LOGIN_REDIRECT_URL = "/"  # Route defined in home/urls.py
-LOGOUT_REDIRECT_URL = "/"  # Route defined in home/urls.py
+LOGIN_REDIRECT_URL = "authen:login"  # Route defined in home/urls.py
+LOGOUT_REDIRECT_URL = "authen:login"  # Route defined in home/urls.py
