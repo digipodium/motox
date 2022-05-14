@@ -41,7 +41,7 @@ def register_user(request):
             msg = 'Account created - please <a href="/login">login</a>.'
             success = True
             messages.success(request, msg)
-            return redirect('authem:login')
+            return redirect('authen:login')
 
         else:
             msg = 'Forms details are invalid'
